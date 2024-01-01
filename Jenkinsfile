@@ -9,8 +9,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    echo env.GIT_COMMIT
                     slack.checkk()
+                    slack.sendReleaseMessage("r20230915-105717")
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
         stage('Hello') {
             steps {
                 script {
-                    slack.sendReleaseMessage("r20230915-105717")
+                    slack.changeReleaseToDiff("r20230915-105717")
                 }
 
             }
