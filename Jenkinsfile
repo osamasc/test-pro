@@ -18,7 +18,7 @@ pipeline {
         stage('Hello') {
             steps {
                 script {
-                    slack.sendBuildNotification("r20230915-105717")
+                    slack("r20230915-105717")
                 }
 
             }
