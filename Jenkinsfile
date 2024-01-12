@@ -1,7 +1,5 @@
 @Library('utils') _
 
-import de.check24.energy.Slack
-
 pipeline {
     agent any
     stages {
